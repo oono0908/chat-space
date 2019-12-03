@@ -34,30 +34,32 @@ Things you may want to cover:
 belongs_to :group
 belongs_to :user
 
-## groups_messagesテーブル
+## groupテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|message_id|text|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|group_name|string|
+|massage_id|integer|
 
 ### Association
 belongs_to :group
-belongs_to :message
+has_many :messages
 
 ## messageテーブル
 |Column|Type|Options|
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
-|message|text|t.string :name, null: false|
+|message|string|
+|image|string|
+
 ### Association
 belongs_to :user
-has_many :messages, through: :groups_messages
+belongs_to :group
 
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|text|t.string :name, null: false|
+|name|string|index: true, null: false, uniqu: true|
 
 ### Association
 has_many :messages
