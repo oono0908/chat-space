@@ -39,7 +39,7 @@ belongs_to :user
 |Column|Type|Options|
 |------|----|-------|
 |group_name|string|
-|massage_id|integer|
+|massage_id|integer|null: false|
 
 ### Association
 belongs_to :group
