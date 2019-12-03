@@ -43,6 +43,7 @@ belongs_to :user
 ### Association
 has_many :users, through: :groups_users
 has_many :messages
+has_many :users
 
 ## messageテーブル
 |Column|Type|Options|
@@ -65,3 +66,4 @@ belongs_to :group
 ### Association
 has_many :messages
 has_many :groups, through: :groups_users
+has_many: groups
