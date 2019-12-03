@@ -38,8 +38,7 @@ belongs_to :user
 
 |Column|Type|Options|
 |------|----|-------|
-|group_name|string|
-|massage_id|integer|null: false|
+|name|string|unique: true, null: false|
 
 ### Association
 belongs_to :group
@@ -59,7 +58,8 @@ belongs_to :group
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|string|index: true, null: false, uniqu: true|
+|name|string|index: true, null: false, unique: true|
+|email|string|index: true, uniqu: true|
 
 ### Association
 has_many :messages
