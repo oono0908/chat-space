@@ -52,7 +52,7 @@ belongs_to :message
 |message|text|t.string :name, null: false|
 ### Association
 belongs_to :user
-has_many :groups, through: :groups_messages
+has_many :messages, through: :groups_messages
 
 ## usersテーブル
 |Column|Type|Options|
@@ -61,4 +61,4 @@ has_many :groups, through: :groups_messages
 
 ### Association
 has_many :messages
-has_many :groups, through: :groups_users
+has_many :users, through: :groups_users
