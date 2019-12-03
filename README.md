@@ -41,7 +41,7 @@ belongs_to :user
 |name|string|unique: true, null: false|
 
 ### Association
-belongs_to :group
+has_many :users, through: :groups_users
 has_many :messages
 
 ## messageテーブル
@@ -50,6 +50,7 @@ has_many :messages
 |user_id|integer|null: false, foreign_key: true|
 |message|string|
 |image|string|
+|group_id|integer|null: false|
 
 ### Association
 belongs_to :user
@@ -63,4 +64,4 @@ belongs_to :group
 
 ### Association
 has_many :messages
-has_many :users, through: :groups_users
+has_many :groups, through: :groups_users
