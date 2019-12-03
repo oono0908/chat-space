@@ -59,7 +59,7 @@ belongs_to :group
 |Column|Type|Options|
 |------|----|-------|
 |name|string|index: true, null: false, unique: true|
-|email|string|index: true, uniqu: true|
+|email|string|index: true, unique: true|
 
 ### Association
 has_many :messages
