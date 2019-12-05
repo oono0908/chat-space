@@ -1,0 +1,33 @@
+.chat_main
+  .chat_main__group_info
+    .chat_main__group_info__name
+      .chat_main__group_info__name__group
+        tech
+      .chat_main__group_info__name__member
+        Member: しん
+    .chat_main__group_info__edit
+      =link_to "#" "class=edit" do
+        Edit
+  .chat_main__message_list
+    .chat_main__message_list__a
+      .chat_main__message_list__a__name
+        %ul.chat_main__message_list__a__name__list
+          %li.chat_main__message_list__a__name__list__user_name masa 
+          %li.chat_main__message_list__a__name__list__time 2019/0908
+      .chat_main__message_list__a__text
+        おはよう
+    .chat_main__message_list__a
+      .chat_main__message_list__a__name
+        %ul.chat_main__message_list__a__name__list
+          %li.chat_main__message_list__a__name__list__user_name masa 
+          %li.chat_main__message_list__a__name__list__time 2019/0908
+      .chat_main__message_list__a__text
+        おはよう
+  .chat_main__message_form
+    .chat_main__message_form__a
+      %input.chat_main__message_form__a__text{:placeholder => "type a message"}
+        %label.chat_main__message_form__a__text__icon.fa.fa-image
+          %input{type: "file",class: 'none'}
+      .chat_main__message_form__a__send
+        =link_to "#" do
+          Send
