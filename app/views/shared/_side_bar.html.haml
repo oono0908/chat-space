@@ -1,0 +1,19 @@
+.side_bar
+  .side_bar__user_name
+    .side_bar__user_name__top_items
+      .side_bar__user_name__top_items__name
+        = current_user.name
+      .side_bar__user_name__top_items__icons
+        = link_to new_group_path do
+          %i.fa.fa-edit
+        = link_to edit_user_path(current_user) do
+          %i.fa.fa-cog 
+  .side_bar__group
+    - current_user.groups.each do |group|
+      .side_bar__groups
+        = link_to group_messages_path(group) do
+          .side_bar__group__name
+            = group.name
+          .side_bar__group__text
+            作成中
+  
