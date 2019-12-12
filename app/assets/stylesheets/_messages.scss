@@ -129,6 +129,7 @@
   width: 300px;
   background-color: #2f3e51;
   float: left;
+  overflow: scroll;
   &__user_name{
     height: 100px;
     background-color: #253141;
@@ -136,6 +137,7 @@
     width: 300px;
     display: flex;
     align-items: center;
+    position: fixed;
     &__top_items{
       height: 20px;
       width: 260px;
