@@ -1,6 +1,4 @@
 $(function(){
-  // var last_message_id = $('.chat_main__message_list__a').last().data('messege-id')
-  // console.log(last_message_id);
   function buildHTML(message){
     if (message.image) {
       var html = `<div class="chat_main__message_list__a" data-message-id=${message.id}>
@@ -84,7 +82,7 @@ $(function(){
       $(".chat_main__message_list").append(insertHTML)
     })
     .fail(function(){
-      console.log("error");
+      alert("error");
     });
   };
   setInterval(reloadMessages, 7000);
