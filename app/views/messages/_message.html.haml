@@ -1,9 +1,9 @@
-.chat_main__message_list__a
+.chat_main__message_list__a{"data-messege-id": "#{message.id}"}
   .chat_main__message_list__a__name
     %ul.chat_main__message_list__a__name__list
-      %li.chat_main__message_list__a__name__list__user_name 
+      %li.chat_main__message_list__a__name__list__user_name
         = message.user.name
-      %li.chat_main__message_list__a__name__list__time 
+      %li.chat_main__message_list__a__name__list__time
         = message.created_at.strftime("%Y/%m/%d %H:%M")
   .chat_main__message_list__a__text
     - if message.content.present?
