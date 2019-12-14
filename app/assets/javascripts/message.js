@@ -67,6 +67,9 @@ $(function(){
    });
   })
   var reloadMessages = function() {
+    console.log("step1");
+    if (window.location.href.match(/\/groups\/\d+\/messages/)){
+      console.log("step2");
     last_message_id = $('.chat_main__message_list__a').last().data('messege-id')
     $.ajax({
       url: "api/messages",
@@ -82,8 +85,10 @@ $(function(){
       $(".chat_main__message_list").append(insertHTML)
     })
     .fail(function(){
+      console.log("エラー");
       alert("error");
     });
   };
+ }
   setInterval(reloadMessages, 7000);
 });
