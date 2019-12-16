@@ -67,10 +67,8 @@ $(function(){
    });
   })
   var reloadMessages = function() {
-    console.log("step1");
     if (window.location.href.match(/\/groups\/\d+\/messages/)){
-      console.log("step2");
-    last_message_id = $('.chat_main__message_list__a').last().data('messege-id')
+     last_message_id = $('.chat_main__message_list__a').last().data('message-id')
     $.ajax({
       url: "api/messages",
       type: "get",
@@ -81,14 +79,14 @@ $(function(){
       var insertHTML = "";
       $.each(messages, function(i, message) {
         insertHTML += buildHTML(message)
+        $(".chat_main__message_list").append(insertHTML)
       });
-      $(".chat_main__message_list").append(insertHTML)
+      $('.chat_main__message_list').animate({ scrollTop: $('.chat_main__message_list')[0].scrollHeight},"fast");
     })
     .fail(function(){
-      console.log("エラー");
       alert("error");
     });
-  };
- }
+  }
+};
   setInterval(reloadMessages, 7000);
 });
