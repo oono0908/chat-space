@@ -74,11 +74,8 @@
     height: 90px;
     width: calc(100vw - 300px);
     background-color: hsl(0, 0%, 82%);
-    // display: flex;
-    // justify-content: center;
     align-items: center;
     &__a{
-      // display: flex;
       height: 50px;
       width: 100%;
       position: relative;
@@ -103,8 +100,6 @@
       &__send{
         height: 45px;
         width: 110px;
-          // display: flex;
-          // justify-content: center;
         align-items: center;
         margin-right: 40px;
         margin-left: 15px;
@@ -119,10 +114,6 @@
     }
   }
 }
-// .file{
-//   width: 1px;
-//   height: 1px;
-// }
 
 .side_bar{
   height: 100vh;
@@ -137,7 +128,6 @@
     width: 300px;
     display: flex;
     align-items: center;
-    position: fixed;
     &__top_items{
       height: 20px;
       width: 260px;
